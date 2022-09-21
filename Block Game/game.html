@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        /* The Board Creation design was modified from (https://www.youtube.com/watch?v=B3pmT7Cpi24&t=252s) */
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'itme', cursive;
+            color: white;
+        }
+        /*  -- used to style background */
+
+        .background {
+            background-color: #12181B;
+            height: 100vh;
+            padding-top: 1px;
+            font-size: 40px;
+        }
+        
+        .section {
+            width: 500px;
+            height: 650px;
+            display: grid;
+            z-index: 1;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            position: fixed;
+            top: 6%;
+            left: 31%;
+        }
+        /*  -- used to style board and sizing */
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 89px);
+            grid-template-rows: repeat(5, 89px);
+            grid-gap: 8px;
+            position: center;
+        }
+        /*  -- used to style player color  */
+
+        .playerYour {
+            color: #09C372
+        }
+        /*  -- used to style individual tiles (grid boxes) */
+        .tile {
+            padding: 0.25em;
+            border: 1px solid white;
+        }
+        /*  -- To style Btn that allows users to move onto next stage */
+        .controlBtn {
+            border: none;
+            border-radius: 9px;
+            width: 60px;
+            height: 30px;
+            position: relative;
+            background: #FF3860;
+            cursor: pointer;
+        }
+        /*  -- used to style red dots and black dots*/
+        .red {
+            height: 25px;
+            width: 25px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .black {
+            height: 25px;
+            width: 25px;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="background">
+        <div class="section">
+            <h1 id="PlayerText">Comp 284</h1>  <!-- -- H1 = heading. This is the tile placed on the top of the page -->
+            <div>
+                <span class="playerYour">Your</span> turn  <!-- -- used to display players turn -->
+            </div>
+            <div class="container">
+                <div class="tile" id="0"></div>  <!-- -- used to display tiles (grid boxes)-->
+                <div class="tile" id="1"></div>  <!-- -- Gird is 5x5 (25 total tiles on board) -->
+                <div class="tile" id="2"></div>
+                <div class="tile" id="3"></div>
+                <div class="tile" id="4"></div>
+                <div class="tile" id="5"></div>
+                <div class="tile" id="6"></div>
+                <div class="tile" id="7"></div>
+                <div class="tile" id="8"></div>
+                <div class="tile" id="9"></div>
+                <div class="tile" id="10"></div>
+                <div class="tile" id="11"></div>
+                <div class="tile" id="12"></div>
+                <div class="tile" id="13"></div>
+                <div class="tile" id="14"></div>
+                <div class="tile" id="15"></div>
+                <div class="tile" id="16"></div>
+                <div class="tile" id="17"></div>
+                <div class="tile" id="18"></div>
+                <div class="tile" id="19"></div>
+                <div class="tile" id="20"></div>
+                <div class="tile" id="21"></div>
+                <div class="tile" id="22"></div>
+                <div class="tile" id="23"></div>
+                <div class="tile" id="24"></div>
+            </div>
+            <div>  <!-- -- used to display sateg button -->
+                <button class="controlBtn" onclick="next()">next</button>
+            </div>
+        </div>
+        <!-- -- used to help link javascript file to HTML page -->
+        <script src="numbers.js"></script>
+    </main>
+</body>
+
+</html>

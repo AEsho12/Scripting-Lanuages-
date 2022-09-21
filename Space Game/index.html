@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Space Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="background"></div>
+        <canvas id="main-canvas"></canvas>
+        <div class="window" id="setup-explain">
+            <div class="text-holder">
+                This is the setup phase.<br>
+                Click on a block in the game grid to select it.<br>
+                When a block is selected you can press a certain key on the keyboard to place an item there.<br>
+                - A - press this to place an asteroid<br>
+                - M - press this to place a mine<br>
+                - R - press this to place a robotic spaceship<br>
+                - U - press this to place the users spaceship<br>
+                - Delete - press this to empty the current block
+            </div>
+        </div>
+        <div class="window" id="stats">
+            <div class="stats-holder">
+                <div class="stats-row">
+                    <div class="stats-name">Round Number:</div>
+                    <div class="stats-value" id="round"></div>
+                </div>
+                <div class="stats-row">
+                    <div class="stats-name">Number of inactive mines:</div>
+                    <div class="stats-value" id="mines"></div>
+                </div>
+                <div class="stats-row">
+                    <div class="stats-name">Number of robotic spaceships:</div>
+                    <div class="stats-value" id="enemies"></div>
+                </div>
+            </div>
+        </div>
+        <div class="button" id="end-game">End Game</div>
+        <div class="button" id="start-game">Start Game</div>
+        <div class="window-mask" id="end-window-mask">
+            <div class="window" id="end-window"></div>
+        </div>
+        <div class="window-mask" id="alert-window-mask">
+            <div class="window" id="alert-window"></div>
+        </div>
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>
